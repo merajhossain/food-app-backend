@@ -22,6 +22,14 @@ exports.ReadTask =async (req, res) => {
     }
 }
 
+exports.Test =async (req, res) => {
+    try{
+        res.json({status:"success",data:"this is demo"})
+    }catch (err) {
+        res.json({status:"fail",message:err})
+    }
+}
+
 exports.UpdateTask =async (req, res) => {
     try{
         let {id}=req.params;

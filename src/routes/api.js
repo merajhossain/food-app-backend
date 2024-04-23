@@ -13,6 +13,7 @@ router.post("/profileUpdate/:userid", AuthMiddleware, UserController.UpdateProfi
 //task
 router.post("/create", AuthMiddleware, TaskController.CreateTask);
 router.get("/read", AuthMiddleware, TaskController.ReadTask);
+router.get("/read", TaskController.Test);
 router.post("/update/:id",AuthMiddleware,TaskController.UpdateTask);
 router.get("/delete/:id",AuthMiddleware,TaskController.DeleteTask);
 
